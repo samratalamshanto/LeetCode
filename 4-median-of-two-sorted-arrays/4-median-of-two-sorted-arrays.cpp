@@ -33,13 +33,13 @@ public:
             arr.push_back(t);
         }
 
-        while(i<m)
+        while(i<m)     //when nums2 is null
         {
             arr.push_back(nums1[i]);
             i++;
 
         }
-        while(j<n)
+        while(j<n)      //when nums1 is null
         {
             arr.push_back(nums2[j]);
             j++;
