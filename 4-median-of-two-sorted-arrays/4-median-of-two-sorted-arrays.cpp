@@ -12,7 +12,8 @@ public:
         int j=0;
 
 
-        while(i<m && j<n )  //  merge and short 2 array in one loop ########
+        while(i<m && j<n )  //  merge and short 2 array in one loop 
+            // [1,2]  [3,4]
         {
             int t=-1;
             if(nums1[i]>nums2[j])
