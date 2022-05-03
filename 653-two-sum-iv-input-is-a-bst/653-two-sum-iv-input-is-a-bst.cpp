@@ -11,11 +11,11 @@
  */
 class Solution {
 public:
-    vector <int> arr;
+    vector <int> arr;   //inorder array of tree nodes
     bool findTarget(TreeNode* root, int k) {
         bool ans;
         inorder(root);
-      if(size(arr)>1)  {
+      if(size(arr)>1)  {        //two pointer value search
         int i=0;
         int j= size(arr)-1;
         sort(arr.begin(), arr.end());
@@ -38,7 +38,7 @@ public:
       }
         else{
          
-                ans = false;
+                ans = false;            // 1 node are false always
         }
         
         return ans;
