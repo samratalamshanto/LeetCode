@@ -4,7 +4,8 @@ public:
         int i=0;
         int j=1;
         string ans="";
-        while(j<=command.length() and i<=command.length()){
+        while(j<=command.length() and i<=command.length()){  
+            // remember here "and" nedded if use "or" time limit exceeded
             if(command[i]=='G'){
                 ans+='G';
                 i++;
