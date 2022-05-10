@@ -17,7 +17,7 @@ public:
     TreeNode* increasingBST(TreeNode* root) {
         if(root != nullptr){
             increasingBST(root->left);
-            arr.push_back(root->val);
+            arr.push_back(root->val); //store tnodes first
             increasingBST(root->right);
         }
         TreeNode* root1 = nullptr;
@@ -28,7 +28,7 @@ public:
             root1= new TreeNode(arr[i]);
           }
           else{
-            create_tree(root1, arr[i] );
+            create_tree(root1, arr[i] ); //then create right node tree
              }
           
          }
