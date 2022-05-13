@@ -10,7 +10,8 @@ public:
         for(int i=0;i<len;i++){
             char c=s[i];
             m[c]++;         //character counting
-            if(m['R'] == m['L']){     //when character counting, we will check if they equal?
+            if(m['R'] == m['L']){    
+        //### when character counting, we will check if they equal?
                 ans++;
             }
             
