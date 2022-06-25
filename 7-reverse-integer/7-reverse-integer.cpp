@@ -3,7 +3,8 @@ public:
     int reverse(int x) {
   long int rem,rev=0;
 
-    if((-1563847412 < x) &&  (x < 1534236469))
+    if((-1563847412 < x) &&  (x < 1534236469)) 
+        //otherwise the ans will not match with this limit, got error.....
     {
         int flag=0;
         if(x<0)
@@ -28,7 +29,7 @@ public:
     }
 
 
-if(x==-2147483412){
+if(x==-2147483412){  //here it is an extra condition bcZ it gives error 
      int flag=0;
         if(x<0)
         {
