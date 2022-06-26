@@ -23,13 +23,12 @@ public:
 
     }
     int len=V.size();
-   //if single element then i and j points same letter so len must greater than  1
   
-
-      //s=" " so len will be 0 after removing space
     int i=0;
     int j=len-1;
-    while(i<=j) //loop with 2 pointer
+    while(i<=j) 
+//loop with 2 pointer. 
+//equal used bcz s="a"(palindrome) i and j same and need to go to the loop
     {
         if(V[i]==V[j])
     //palindrome so last letter and first letter must be same and this will go on
