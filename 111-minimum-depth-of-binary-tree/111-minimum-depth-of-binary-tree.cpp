@@ -24,6 +24,8 @@ public:
            
             
             for(int i=0;i<len;i++){
+                //in the loop we need to take tmp and pop,
+                //otherwise "highlevel node" will not work
                TreeNode* tmp= nodes.front(); //take front, store in tmp
                nodes.pop(); //then pop
                 if(tmp->right == nullptr && tmp->left==nullptr){ //laef node
