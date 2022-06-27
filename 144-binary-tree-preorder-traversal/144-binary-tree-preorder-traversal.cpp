@@ -16,7 +16,9 @@ public:
     void preorder(TreeNode* root,vector<int>&ans){ 
         
         //vector ### "&ans" ### otherwise error
-        //otherwise null ans return
+        //otherwise null ans return, we need to send adress of ans vector
+        // passing by reference
+        //the pointer * points to the address location of the data. The reference & points to the data.
         
         if(root==nullptr){
             return;
