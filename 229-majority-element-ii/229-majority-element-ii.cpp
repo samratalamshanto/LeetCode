@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
         int res;
-        set<int>set1;
+        set<int>set1; //set
         vector<int> ans;  //vector
         map<int,int> mp; //map---ordered,less memory 
         int n=ceil(nums.size()/3); //condition
@@ -15,7 +15,7 @@ public:
             
             i++;
         }
-        ans.assign(set1.begin(),set1.end());  //assign set value into vector
+        ans.assign(set1.begin(),set1.end());//vector.assign() set value into vector
         return ans;
         
     }
