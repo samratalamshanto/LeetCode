@@ -18,7 +18,9 @@ public:
             V.push_back(tmp->val);
             tmp=tmp->next; //increase the tmp
         }
+        
         int i=0,j=V.size()-1;
+        
         while(i<=j) //i<=j bcz 1 0 1, here 0 will match in this condition 
         // 1 0 1 is palindrome
         {
@@ -31,6 +33,7 @@ public:
                 return false; //if any unmatch then it will return false
             }
         }
+        
         return true;   //otherwise true
         
     }
