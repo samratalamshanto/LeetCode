@@ -10,10 +10,11 @@
  */
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* cur=head;ListNode* prev;
+    ListNode* reverseList(ListNode* head) { //use 3 pointer-->cur,prev,tmp
+        ListNode* cur=head;
+        ListNode* prev;
         ListNode* tmp=head;
-        prev=NULL;
+        prev=NULL; //initialize 
         while(cur!=nullptr ){
             tmp =  cur->next; //next location store in tmp variable 
             cur->next= prev; //then change cur's next location
