@@ -16,7 +16,7 @@ public:
                 }
                 sum=0;
             }
-                if(value<sum)  //when there is last 1 so it will not go else, here recheck
+                if(value<sum)  //when there is last 1 so it will not go "else condition", here recheck
                 {
                     value=sum;
                 }
