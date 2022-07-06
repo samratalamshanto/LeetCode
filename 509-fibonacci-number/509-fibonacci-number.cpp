@@ -2,22 +2,27 @@ class Solution {
 public:
     int fib(int n) 
     {
-        int arr[n+1];
-       
+        int sum=0;
+  //extra memory save by not using arr[n+1]
 
-
+ //use 3 tmp variable to store them 
+        
         if(n<=1) return n;
-        arr[0]=0;
-        arr[1]=1;
+        int prev=0;
+        int prev1=1;
 
         for(int i=2;i<=n;i++)
         {
-         arr[i]=arr[i-1]+arr[i-2];
+        int tmp;
+        sum = prev+ prev1;
+        tmp=prev1; 
+        prev1= sum;
+        prev= tmp;
         }
         
         
         
-        return arr[n];
+        return sum;
         
     }
 };
