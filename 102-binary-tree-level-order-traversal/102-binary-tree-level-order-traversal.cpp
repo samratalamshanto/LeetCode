@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    void traverse(TreeNode* root,vector<vector<int>>&res)
+    void traverse(TreeNode* root,vector<vector<int>>&res) //bfs
     {
         queue<TreeNode*>Q;
         Q.push(root);
