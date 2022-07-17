@@ -4,7 +4,7 @@ public:
         int left=0; int mid;
         int right=nums.size()-1;
        
-      for( left=0;left<=right;left++)   
+      for( left=0;left<=right;left++)   //O(logn)
        {
            mid=left+(right-left)/2;
            if(nums[left]==target) return left;
@@ -20,18 +20,18 @@ public:
                }
                else if(target<nums[left] && target<nums[mid])
                {
-                   left=mid;
+                   left=mid;  //not mid+1 bcz loop increase left end of this. so only left = mid
                }
            }
           else if(nums[left]>nums[mid])  //[5,0,1,2,3,4]
           {
               if(target<nums[left] && target>nums[mid])
               {
-                  left=mid;
+                  left=mid;  //same, target=3
               }
               else if(target<nums[mid] && target< nums[left])
               {
-                  right=mid;
+                  right=mid;  //target=1
               }
               
 
