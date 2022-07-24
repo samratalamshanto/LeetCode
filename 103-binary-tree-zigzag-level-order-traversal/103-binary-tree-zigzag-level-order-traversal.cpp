@@ -19,7 +19,8 @@ public:
         queue<TreeNode*>Q;
         Q.push(root);
         
-        int value=0;
+        int value=0; //value assign to check zigzag means reverse or not
+        
         while(!Q.empty())
         {
             int len=Q.size();
@@ -41,14 +42,14 @@ public:
                     Q.push(cur->right);
                 }
             }
-            if(value%2==0)
+            if(value%2==0)  //value assign to check zigzag means reverse or not
             {
                 ans.push_back(tmp);
             }
             else
             {
-                reverse(tmp.begin(),tmp.end());
-                ans.push_back(tmp);
+                reverse(tmp.begin(),tmp.end());  //reverse if odd
+                ans.push_back(tmp);  //then push
             }
             value++;
         }
