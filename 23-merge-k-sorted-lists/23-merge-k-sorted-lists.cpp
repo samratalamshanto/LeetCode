@@ -24,9 +24,7 @@ public:
     
     ListNode* mergeKLists(vector<ListNode*>& lists) {
         
-
-        
-     ListNode* head=new ListNode(-1);  
+        ListNode* head=new ListNode(-1);  
         ListNode* ans=head;
         vector<int>tmp;
         for(int i=0;i<lists.size();i++)
@@ -35,7 +33,7 @@ public:
             traverse(tmp1,tmp);
         }
         
-        sort(tmp.begin(),tmp.end());
+        sort(tmp.begin(),tmp.end()); //sort 
         
         for(int i=0;i<tmp.size();i++)
         {
@@ -43,6 +41,7 @@ public:
             head=head->next;
         }
         head->next=nullptr;
+        
         return ans->next;
     }
 };
