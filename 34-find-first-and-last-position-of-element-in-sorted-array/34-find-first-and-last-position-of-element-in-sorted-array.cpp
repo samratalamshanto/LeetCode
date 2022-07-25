@@ -1,44 +1,56 @@
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
-        int a=nums.size();
-        int i,j,k,m=-1,n=-1,flag=0;
-        i=0; k=a-1;
-        int t=a;
-        vector <int> tmp;
-
         
+        vector<int>ans;
+        int len=nums.size();
         
-        while(t)
+        if(len==0)
         {
-            if(nums[i]<target)
-            {
-                i++; 
-            
-            }
-            else if(nums[i]==target)
-            {
-                m=i;
-                
-            }
-            if(nums[k]>target)
-            {
-                k--;
-            }
-            else if(nums[k]==target)
-            {
-                n=k;
-              
-            }
-            
-            t--;
+            ans.assign({-1,-1});  // assign() used for multiple elements insertion
+            return ans;
         }
         
-        tmp.push_back(m);
-        tmp.push_back(n);
+        int low=0;
+        int high=len-1;
+        int flag_low=0;
+        int flag_high=0;
+        
+        while(low<=high)
+        {
+            if(nums[low]==target && flag_low==0) //flag used otherwise low insert multiple times
+            {
+                ans.push_back(low);
+                flag_low=1; 
+            }
+            else if(nums[low]<target)
+            {
+                low++;
+            } 
+            else if(nums[high]==target && flag_high==0) //flag used otherwise high insert multiple times
+            {
+                ans.push_back(high);
+                flag_high=1;
+               
+            }
+            else if(nums[high]>target)
+            {
+                high--;
+            }
+            
+            if(flag_low && flag_high)  //found low and high so break
+            {
+                break;
+            }
+        }
+        if(ans.size()==0)
+        {
+            ans.assign({-1,-1});
+        }
         
         
-        return tmp;
         
+        
+        return ans;
     }
 };
