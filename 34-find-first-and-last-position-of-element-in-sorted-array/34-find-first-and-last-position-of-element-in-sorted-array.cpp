@@ -16,7 +16,7 @@ public:
         int flag_low=0;
         int flag_high=0;
         
-        while(low<=high)
+        while(low<=high)  //low <= high bcz [1] 1---- [0,0]
         {
             if(nums[low]==target && flag_low==0) //flag used otherwise low insert multiple times
             {
