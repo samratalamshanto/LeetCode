@@ -32,18 +32,12 @@ public:
                 {
                     tmp=tmp->right;
                 }
-                tmp->right = tmp2;
+                tmp->right = tmp2; //we came to nullprt so assign that with root->right
                 
             }
-            else{
+            else{ //when root->right == nullptr
                 root->right = tmp;
             }
-            
-            
-            // if()
-            // {
-            //     flatten(root->left->right);
-            // }
             
         }
         
