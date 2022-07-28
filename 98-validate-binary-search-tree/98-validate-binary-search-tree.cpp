@@ -15,7 +15,7 @@ public:
     {
         if(!root) return true;
         
-        if(root->val >= value) return false; //left greater means wrong
+        if(root->val >= value) return false; //left greater or equal means wrong
         
         
         return HelperLeft(root->right,value) && HelperLeft(root->left,value);
@@ -26,7 +26,7 @@ public:
         if(!root) return true;
 
         
-        if(root->val <= value)  //right small means wrong
+        if(root->val <= value)  //right small or equal means wrong
         {
             return false;
         } 
