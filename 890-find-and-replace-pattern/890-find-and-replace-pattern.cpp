@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    //O(n+k)  //n wirds svector size 
+    //k words's word length
         vector<int> getPattern(string word)
         {
             if(word.size()==0)
