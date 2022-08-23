@@ -12,29 +12,29 @@ class Solution {
 public:
     bool isPalindrome(ListNode* head) {
         ListNode* tmp=head;
-        vector<int>V; //LIFO 
+        vector<int>V;
         while(tmp!=nullptr)
         {
             V.push_back(tmp->val);
-            tmp=tmp->next; //increase the tmp
+            tmp=tmp->next;
         }
         
-        int i=0,j=V.size()-1;
-        
-        while(i<=j) //i<=j bcz 1 0 1, here 0 will match in this condition 
-        // 1 0 1 is palindrome
+        int low,high;
+        low =0;
+        high=V.size()-1;
+        while(low<=high)
         {
-            if(V[i]==V[j])
+            if(V[low]==V[high])
             {
-                i++;
-                j--;
+                low++;
+                high--;
             }
-            else{
-                return false; //if any unmatch then it will return false
+            else
+            {
+                return false;
             }
         }
         
-        return true;   //otherwise true
-        
+        return true;
     }
 };
