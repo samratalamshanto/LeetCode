@@ -8,7 +8,7 @@ public:
         v[node]=true;
         for(int i=0;i<rooms[node].size();i++)
         {
-            if(v[rooms[node][i]]==false)
+            if(v[rooms[node][i]]==false)  //check the room value visited??
             {
                 dfs(rooms,rooms[node][i],v);
             }
