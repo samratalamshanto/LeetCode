@@ -1,5 +1,8 @@
 class Solution {
 public:
+    
+    //dfs algorithm 
+    
     void dfs(vector<vector<int>>& rooms, int node,vector<bool>&v)
     {
         v[node]=true;
